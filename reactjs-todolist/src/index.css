@@ -1,0 +1,169 @@
+/* Apply a smooth transition for the page load */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #2f2f2f;
+  transition: all 0.5s ease;
+}
+
+/* Make the todo container larger, dark grey, and add smooth transition */
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #333;
+  color: #fff;
+  padding: 40px;
+  border-radius: 25px;
+  width: 600px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s ease-in-out;
+  transform: scale(1);
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.night-mode {
+  background: #121212;
+}
+
+/* Add a fade-in effect when the page loads */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Styling for the todo header input and button */
+.todo-header {
+  display: flex;
+  width: 100%;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-header input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  background: #444;
+  color: #fff;
+  outline: none;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.todo-header input:focus {
+  background: #555;
+}
+
+.todo-header button {
+  padding: 12px;
+  border: none;
+  border-radius: 20px;
+  background: #404440;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.todo-header button:hover {
+  background: #45a049;
+}
+
+.emoji-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #444, #555);
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.todo-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px cyan;
+}
+
+.actions-container button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.actions-container button:hover {
+  color: #ff6347;
+}
+
+/* Styling for the header container and quote */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 18px;
+  color: #557258;
+  font-weight: 600;
+}
+
+/* Day/Night Mode Button */
+.mode-toggle {
+  background-color: #444;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 25px; /* Rounded corners for the button */
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mode-toggle:hover {
+  background-color: #555;
+}
+
+.emoji-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+    
